@@ -22,24 +22,25 @@ function App() {
   }, [enabled])
 
   return (
-    <main>
+    <>
       <div style={{
         position: 'absolute',
         backgroundColor: '#87D0E4',
+        border: '1px solid #fff',
         borderRadius: '50%',
         opacity: 0.8,
         pointerEvents: 'none',
-        left: -20,
-        top: -20,
-        width: 40,
-        height: 40,
+        left: -25,
+        top: -25,
+        width: 50,
+        height: 50,
         transform: `translate(${position.x}px, ${position.y}px)`
       }}>
       </div>
       <button onClick={() => setEnabled(!enabled)}>
         {enabled ? "Deactivate" : "Active"} Follow mouse
       </button>
-    </main>
+    </>
   )
 }
 
